@@ -22,8 +22,8 @@
 *Eine satirische Odysee durch die Welt der Phasenausfälle, des "Remote-Voodoo" und der Suche nach der verlorenen dritten Phase.*
 
 <p align="center">
-  <img src="https://derlemue.github.io/villa-kunterbunt/assets/images/Die%20Villa%20Kunterbunt%20-%20Korrespondez%20Epos%20Cover%20Front_HQ_thumb.png" width="45%" alt="Cover Front" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
-  <img src="https://derlemue.github.io/villa-kunterbunt/assets/images/Die%20Villa%20Kunterbunt%20-%20Korrespondez%20Epos%20Cover%20Back_HQ_thumb.png" width="45%" alt="Cover Back" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+  <img src="♥-inbox/villa-kunterbunt/assets/images/Die Villa Kunterbunt - Korrespondez Epos Cover Front_HQ_thumb.png" width="45%" alt="Cover Front" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+  <img src="♥-inbox/villa-kunterbunt/assets/images/Die Villa Kunterbunt - Korrespondez Epos Cover Back_HQ_thumb.png" width="45%" alt="Cover Back" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
 </p>
 
 [![PDF Download](https://img.shields.io/badge/Download-PDF_Ebook-red?style=for-the-badge&logo=adobeacrobatreader)](https://derlemue.github.io/villa-kunterbunt/assets/Die%20Villa%20Kunterbunt%20-%20Korrespondez%20Epos%20-%20derlemue.pdf)
