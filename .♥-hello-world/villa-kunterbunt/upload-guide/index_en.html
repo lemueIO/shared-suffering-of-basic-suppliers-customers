@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Guide - Villa Kunterbunt</title>
+    <meta name="description"
+        content="Guide for companies on how to submit documents to the Villa Kunterbunt repository">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #764ba2;
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        h3 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .diagram-container {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .mermaid {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        .highlight-box {
+            background: rgba(102, 126, 234, 0.1);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box strong {
+            color: #667eea;
+        }
+
+        ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        ol li {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+
+        ul {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+
+        .example {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 5px;
+        }
+
+        .status-new {
+            background: #fef3cd;
+            color: #856404;
+        }
+
+        .status-approved {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 24px;
+            background: #764ba2;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            background: #5f3c82;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(118, 75, 162, 0.4);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📤 Upload Guide</h1>
+        <p class="subtitle">Guide for Companies on Document Submission</p>
+
+        <div class="highlight-box">
+            <strong>Important:</strong> This guide describes the structured process for submitting PDF, Markdown, or
+            Word documents. It ensures clean version control and a clear overview of the processing status.
+        </div>
+
+        <h2>📊 Process Overview</h2>
+        <div class="diagram-container">
+            <div class="mermaid">
+                graph TD
+                A[Start: Document created] --> B[Rename file: Add prefix 'NEW_']
+                B --> C[Upload to folder: /assets/reports/]
+                C --> D[Create Pull Request]
+                D --> E{Review by Administration}
+
+                E -- Correction needed --> F[Feedback to company]
+                F --> B
+
+                E -- Approved --> G[Remove prefix 'NEW_']
+                G --> H[Document officially archived]
+                H --> I[End]
+            </div>
+        </div>
+
+        <h2>1️⃣ File Preparation</h2>
+        <p>Before uploading a file, ensure it complies with the required naming scheme. Every new document must be
+            prefixed with <strong>NEW_</strong>. This abbreviation serves as an entry marker for the administration.</p>
+
+        <div class="highlight-box">
+            <strong>Filename:</strong> <code>NEW_Filename.Extension</code>
+        </div>
+
+        <p><strong>Examples:</strong></p>
+        <div class="example">
+            NEW_FinalReport_CompanyXY.pdf<br>
+            NEW_Documentation.docx<br>
+            NEW_Instructions.md
+        </div>
+
+        <h2>2️⃣ Target Directory</h2>
+        <p>All documents must be placed in the following path within the repository:</p>
+        <div class="highlight-box">
+            <code>assets/reports/</code>
+        </div>
+
+        <h2>3️⃣ Submission Process (Step by Step)</h2>
+        <ol>
+            <li>
+                <strong>Access Repository:</strong><br>
+                Navigate on GitHub to the directory <code>assets/reports/</code>.
+            </li>
+            <li>
+                <strong>Upload File:</strong>
+                <ul>
+                    <li>Click the <strong>"Add file"</strong> button in the top right corner and select <strong>"Upload
+                            files"</strong>.</li>
+                    <li>Drag the prepared file (with the <code>NEW_</code> prefix) into the upload field or select it
+                        from your local computer.</li>
+                </ul>
+                <img src="../assets/images/guide/file_selection.png" alt="Screenshot File Selection"
+                    style="width: 100%; border-radius: 8px; margin-top: 15px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #eee;">
+            </li>
+            <li>
+                <strong>Create Commit:</strong>
+                <ul>
+                    <li>Enter a brief, precise description in the "Commit changes" field (e.g., <em>"Submission Final
+                            Report Company XY"</em>).</li>
+                    <li>Select the option <strong>"Create a new branch for this commit and start a pull
+                            request"</strong>.</li>
+                    <li>Click <strong>"Propose changes"</strong>.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Open Pull Request (PR):</strong><br>
+                Finally, click <strong>"Create pull request"</strong>.
+                <img src="../assets/images/guide/pr_creation_cropped.png" alt="Screenshot Pull Request Creation"
+                    style="width: 100%; border-radius: 8px; margin-top: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #eee;">
+            </li>
+        </ol>
+
+        <h2>4️⃣ Approval and Processing</h2>
+        <p>After the file has been submitted, it will be reviewed by the project management:</p>
+
+        <img src="../assets/images/guide/pr_success_cropped.png" alt="Screenshot Successful Pull Request"
+            style="width: 100%; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #eee;">
+
+        <h3>Status "Received"</h3>
+        <p><span class="status-badge status-new">📋 NEW</span> The file remains in the folder with the <code>NEW_</code>
+            prefix.</p>
+
+        <h3>Status "Approved"</h3>
+        <p><span class="status-badge status-approved">✅ APPROVED</span> Once the document has been reviewed and
+            accepted, the <code>NEW_</code> prefix will be removed (renamed to <code>FinalReport_CompanyXY.pdf</code>).
+            This officially integrates the document into the repository and makes it finally accessible to all
+            participants.</p>
+
+        <div class="highlight-box" style="margin-top: 40px;">
+            <strong>💡 Note:</strong> If corrections are required, you will receive feedback via the Pull Request.
+            Please make the necessary adjustments and resubmit the file.
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://github.com/derlemue/villa-kunterbunt/blob/main/README_EN.md#companies-en"
+                class="back-link">← Back to
+                Repository</a>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+
+</html>
